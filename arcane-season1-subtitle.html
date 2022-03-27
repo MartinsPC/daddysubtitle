@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #search {
+        position: relative;
+        left: 20px;
+        color: rgb(250, 12, 12);
+      }
+      #back {
+        color: skyblue;
+      }
+      .sidenav {
+        height: 80%;
+        width: 0;
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+      }
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 10px;
+        color: black;
+        display: block;
+        transition: 0.3s;
+      }
+      #mysidenav {
+        background-color: rgb(250, 12, 12);
+        position: fixed;
+        top: 100px;
+        bottom: 50px;
+      }
+      .sidenav a {
+        color: black;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: white;
+      }
+      .sidenav .openbtn {
+        position: relative;
+        bottom: 0;
+      }
+      #main {
+        transition: margin-left 0.5s;
+        padding: 20px;
+      }
+      @media screen {
+        .sidenav {
+          padding-top: 15px;
+        }
+        .sidenav a {
+          font-size: 100px;
+        }
+      }
+      .topnav {
+        background-color: rgb(179, 11, 11);
+        overflow: hidden;
+        height: 70px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 100;
+      }
+      .topnav a {
+        float: none;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .about:hover {
+        background-color: #ddd;
+        color: black;
+        border-radius: 50%;
+      }
+      .b:hover {
+        background-color: #ddd;
+        color: black;
+        border-radius: 50%;
+      }
+
+      .openbtn:hover {
+        background-color: #ddd;
+        color: black;
+        border-radius: 50%;
+      }
+
+      .topnav a.active {
+        background-color: #04aa6d;
+        color: white;
+      }
+
+      #TAUGHT-ME {
+        position: relative;
+        left: 500px;
+        top: -100px;
+        font-size: 55px;
+        color: white;
+        font-family: cursive;
+      }
+      .facebook:hover {
+        background-color: cadetblue;
+        color: black;
+        border-radius: 50%;
+      }
+      .gmail:hover {
+        background-color: cadetblue;
+        color: black;
+        border-radius: 50%;
+      }
+      .whatsapp:hover {
+        background-color: cadetblue;
+        color: black;
+        border-radius: 50%;
+      }
+      .home:hover {
+        background-color: #ddd;
+        color: black;
+        border-radius: 50%;
+      }
+      .closebtn:hover {
+        color: black;
+      }
+      .c:hover {
+        background-color: #ddd;
+        border-radius: 50%;
+      }
+      #footer {
+        background-color: rgb(179, 11, 11);
+        overflow: hidden;
+        height: 70px;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        left: 0;
+      }
+      #A:hover {
+        background-color: red;
+        border-radius: 50%;
+      }
+    </style>
+    <script>
+      function openNav() {
+        document.getElementById("mysidenav").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mysidenav").style.width = "0";
+      }
+      function openNav() {
+        document.getElementById("mysidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mysidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </head>
+  <body style="background-color: white">
+    <div>
+      <div id="mysidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&lHar;</a
+        >
+        <br /><br /><br />
+        <hr />
+        <form id="search">
+          <input type="search" placeholder="search" name="search" />
+          <button type="submit">&#128269;</button>
+        </form>
+        <hr />
+        <a
+          href="disclaimer.html"
+          class="about"
+          style="
+            font-family: cursive;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+          "
+          ><b>DISCLAIMER&#x1F6C8;</b></a
+        >
+        <hr />
+        <a
+          href="index.html"
+          class="b"
+          style="
+            font-family: cursive;
+            font-size: 20px;
+            color: white;
+            left: 5px;
+            text-indent: -1em;
+          "
+          ><b>UPCOMING&nbsp;FEATURES</b></a
+        >
+        <hr />
+        <a
+          href="mailto:sirmartpc@gmail.com"
+          class="c"
+          style="
+            font-family: cursive;
+            font-size: 20px;
+            color: white;
+            text-indent: -1em;
+          "
+          ><b>CONTACT DEVELOPER</b></a
+        >
+        <hr />
+        <form id="search">
+          <input type="search" placeholder="search" name="search" />
+          <button type="submit">&#128269;</button>
+        </form>
+        <hr />
+      </div>
+      <div class="topnav">
+        <a
+          href="javascript:void(0)"
+          class="openbtn"
+          onclick="openNav()"
+          style="
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+              'Lucida Sans', Arial, sans-serif;
+            font-size: 30px;
+            color: white;
+            position: relative;
+            left: 10px;
+            top: 15px;
+          "
+          >MENU&#9776;</a
+        >
+
+        <b><p id="TAUGHT-ME">DADDY MI</p></b>
+        <a
+          href="https://www.facebook.com/DADDY-MI-104228578795611/"
+          style="position: relative; left: 900px; top: -220px; font-size: 30px"
+          ><img src="images/facebook.png" class="facebook"
+        /></a>
+        <a
+          href="mailto:daddymi.business@gmail.com"
+          style="position: relative; left: 700px; top: -215px; font-size: 30px"
+          ><img src="images/gmail.png" class="gmail"
+        /></a>
+        <a
+          href="https://t.me/+CwvCdm6c-HA0OWJk"
+          style="left: 850px; position: relative; top: -215px; font-size: 30px"
+          ><img src="images/telegram.png" class="whatsapp"
+        /></a>
+
+        <a
+          href="index.html"
+          style="
+            float: left;
+            position: relative;
+            top: -225px;
+            font-size: 30px;
+            left: 160px;
+          "
+          class="home"
+          >HOME&#127968;</a
+        >
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br />
+    <h1 style="text-align: center">ARCANE SEASON 1 SUBTITLE</h1>
+   <center> <img
+      src="img/Arcane.jpg"
+      alt="ARCANE avatar"
+      style="border-radius: 10px; position: relative; height: 250px"
+    /></center>
+    <i
+      ><h3 style="text-align: center">
+        The origins of two iconic League champions, set in the utopian Piltover and the oppressed underground of Zaun.
+      </h3></i
+    >
+    <h3>
+      Here we provided English Subtitle of the above movie in DADDY MI INC. You
+      Can Get the English Subtitle with a Single Click on the green box Which
+      Provided by DADDY MI INC.
+      You found this page while you were searching for the above movie, which is one of the trending Movies.
+    </h3>
+
+    <b
+      ><p style="text-align: center">
+        <i>CLICK GREEN BOX BELOW TO DOWNLOAD</i>
+      </p></b
+    >
+  <center> <div>
+      <div
+        class="loki"
+        style="
+          background-color: green;
+          width: 600px;
+          position: relative;
+          border-radius: 20px;
+        "
+      >
+        <a
+          href="subtitles/Arcane.S01E01.Welcome.to_.the_.Playground.1080p.NF_.WEB-DL.DDP5_.1.H.264-TEPES.srt"
+          download="Arcane s01 ep1(DADDY-MI) Subtitle"
+          style="text-decoration: black"
+          ><h2 style="color: white; text-align: center">
+            DOWNLOAD ARCANE SEASON 1 EPISODE 1 SUBTITLE
+          </h2></a
+        >
+      </div>
+      <div
+        class="loki"
+        style="
+          background-color: green;
+          width: 600px;
+          position: relative;
+          border-radius: 20px;
+        "
+      >
+        <a
+          href="subtitles/Arcane.S01E02.Some_.Mysteries.Are_.Better.Left_.Unsolved.1080p.NF_.WEB-DL.DDP5_.1.H.264-TEPES.srt"
+          download="ARCANE s01 ep2(DADDY-MI) Subtitle"
+          style="text-decoration: black"
+          ><h2 style="color: white; text-align: center">
+            DOWNLOAD ARCANE SEASON 1 EPISODE 2 SUBTITLE
+          </h2></a
+        >
+      </div>
+      <div
+        class="loki"
+        style="
+          background-color: green;
+          width: 600px;
+          position: relative;
+          border-radius: 20px;
+        "
+      >
+        <a
+          href="subtitles/Arcane.S01E03.The_.Base_.Violence.Necessary.for_.Change.1080p.NF_.WEB-DL.DDP5_.1.H.264-TEPES.srt"
+          download="ARCANE s01 ep3(DADDY-MI) Subtitle"
+          style="text-decoration: black"
+          ><h2 style="color: white; text-align: center">
+            DOWNLOAD ARCANE SEASON 1 EPISODE 3 SUBTITLE
+          </h2></a
+        >
+      </div>
+      <div
+        class="loki"
+        style="
+          background-color: green;
+          width: 600px;
+          position: relative;
+          border-radius: 20px;
+        "
+      >
+        <a
+          href="subtitles/Arcane.S01E04.Happy_.Progress.Day_.1080p.NF_.WEB-DL.DDP5_.1.H.264-TEPES.srt"
+          download="ARCANE s01 ep4(DADDY-MI) Subtitle"
+          style="text-decoration: black"
+          ><h2 style="color: white; text-align: center">
+            DOWNLOAD ARCANE SEASON 1 EPISODE 4 SUBTITLE
+          </h2></a
+        >
+      </div>
+      <div
+        class="loki"
+        style="
+          background-color: green;
+          width: 600px;
+          position: relative;
+          border-radius: 20px;
+        "
+      >
+        <a
+          href="subtitles/Arcane.S01E05.Everybody.Wants_.to_.Be_.My_.Enemy_.1080p.NF_.WEB-DL.DDP5_.1.H.264-TEPES.srt"
+          download="ARCANE s01 ep5(DADDY-MI) Subtitle"
+          style="text-decoration: black"
+          ><h2 style="color: white; text-align: center">
+            DOWNLOAD ARCANE SEASON 1 EPISODE 5 SUBTITLE
+          </h2></a
+        >
+      </div>
+      <div
+        class="loki"
+        style="
+          background-color: green;
+          width: 600px;
+          position: relative;
+          border-radius: 20px;
+        "
+      >
+        <a
+          href="subtitles/Arcane.S01E06.When_.These_.Walls_.Come_.Tumbling.Down_.1080p.NF_.WEB-DL.DDP5_.1.H.264-TEPES.srt"
+          download="ARCANE s01 ep6(DADDY-MI) Subtitle"
+          style="text-decoration: black"
+          ><h2 style="color: white; text-align: center">
+            DOWNLOAD ARCANE SEASON 1 EPISODE 6 SUBTITLE
+          </h2></a
+        >
+      </div>
+      <div
+        class="loki"
+        style="
+          background-color: green;
+          width: 600px;
+          position: relative;
+          border-radius: 20px;
+        "
+      >
+        <a
+          href="subtitles/Arcane.S01E07.The_.Boy_.Savior.1080p.NF_.WEB-DL.DDP5_.1.x264-TEPES.srt"
+          download="ARCANE s01 ep7(DADDY-MI) Subtitle"
+          style="text-decoration: black"
+          ><h2 style="color: white; text-align: center">
+            DOWNLOAD ARCANE SEASON 1 EPISODE 7 SUBTITLE
+          </h2></a
+        >
+      </div>
+      <div
+        class="loki"
+        style="
+          background-color: green;
+          width: 600px;
+          position: relative;
+          border-radius: 20px;
+        "
+      >
+        <a
+          href="subtitles/Arcane.S01E08.Oil_.and_.Water_.1080p.NF_.WEB-DL.DDP5_.1.x264-TEPES.srt"
+          download="ARCANE s01 ep8(DADDY-MI) Subtitle"
+          style="text-decoration: black"
+          ><h2 style="color: white; text-align: center">
+            DOWNLOAD ARCANE SEASON 1 EPISODE 8 SUBTITLE
+          </h2></a
+        >
+      </div>
+      <div
+        class="loki"
+        style="
+          background-color: green;
+          width: 600px;
+          position: relative;
+          border-radius: 20px;
+        "
+      >
+        <a
+          href="subtitles/Arcane.S01E09.The_.Monster.You_.Created.1080p.NF_.WEB-DL.DDP5_.1.x264-TEPES.srt"
+          download="ARCANE s01 ep9(DADDY-MI) Subtitle"
+          style="text-decoration: black"
+          ><h2 style="color: white; text-align: center">
+            DOWNLOAD ARCANE SEASON 1 EPISODE 9 SUBTITLE
+          </h2></a
+        >
+      </div>
+    </div></center> 
+    <br />
+    <hr />
+    <p style="text-align: center">
+      <b
+        ><i>
+          Many versions of Subtitles have been added. Your No. 1 trusted
+          subtitle blog, on.com. <br />
+          DADDY-MI is here to ensure you have an easy read throughout the
+          subtitle to the trending movies and Tv Shows.
+          <br />
+          DADDY MI is given in a whole lot of versions ranging from Blu-ray, HD
+          Rip, 720P, 1080P to many more. <br />
+          The subtitle file that we are giving is working with almost all the
+          versions of the Video copy that you are having.<br />
+          SRT file is only available in English, We’re planning to add more
+          languages to our future subtitles.</i
+        ></b
+      >
+    </p>
+    <!-- <developed by Martins PC> -->
+    <div id="footer">
+      <div style="text-align: center; color: yellow">
+        <a href="privacy.html" style="color: yellow">PRIVACY</a>&nbsp;
+        <a href="ADVERTISE.html" style="color: yellow">ADVERTISE</a>&nbsp;
+        <a href="mailto:daddymi.business@gmail.com" style="color: yellow"
+          >CONTACT</a
+        >
+      </div>
+      <p style="text-align: center; font-size: 17px; color: white">
+        All images and documents are copyrighted to their respectful owners
+        unless stated otherwise. This website is not associated with any
+        external links or websites.
+      </p>
+    </div>
+  </body>
+</html>
